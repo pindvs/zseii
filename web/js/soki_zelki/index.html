@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <title>Pole trójkąta</title>
+    <style>
+        div{
+            padding: 30px;
+            margin: auto;
+            width: 150px;
+            border: 3px red dotted;
+            text-align: center;
+        }
+        #a, #h{
+            width: 75px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div" onmouseover="over()" onmouseout="out()">
+        <p>a: <input type="number" id="a" placeholder="podstawa"></p>
+        <p>h: <input type="number" id="h" placeholder="wysokosc"></p>
+        <button onclick="oblicz()" type="button">Oblicz</button>
+        <p id="wynik"><br></p>
+    </div>
+</body>
+</html>

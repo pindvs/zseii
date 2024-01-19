@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Obrazki</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+            margin-top: 100px;
+        }
+        *{
+            text-align: center;
+        }
+        body{
+            background-color: #cccccc;
+        }
+        h3, h5{
+            background-color: white;
+            font-family: arial;
+        }
+    </style>
+        <script>
+            function wisnia(){
+                document.getElementById("wynik").innerHTML = "WISNIA";
+                document.getElementById("tresc").innerHTML = "bardzo fajna wisnia wisnia oioioioioio spk";
+            }
+            function banan(){
+                document.getElementById("wynik").innerHTML = "BANAN";
+                document.getElementById("tresc").innerHTML = "banan !!!!!! niezly spk zolty owoc";
+            }
+            function jablko(){
+                document.getElementById("wynik").innerHTML = "JABLKO";
+                document.getElementById("tresc").innerHTML = "jabluszko czerwone jabluszko tiriri :33";
+            }
+             function cytryna(){
+                document.getElementById("wynik").innerHTML = "CYTRYNA";
+                document.getElementById("tresc").innerHTML = "kwasna troche slaba nei fajna lapka w dol";
+            }
+            function wisnia2(){
+                document.getElementById("wynik").innerHTML = "WISNIA";
+                document.getElementById("tresc").innerHTML = "drugi raz wisnia bo obrazkow braklo";
+            }
+        </script>
+</head>
+<body>
+    <div id="tabela">
+        <tr style="height:10em">
+            <td class="klasa"><img src="wisnia.png" id="wisnia" onclick="wisnia()"></td>
+            <td class="klasa"><img src="banan.png" id="banan" onclick="banan()"></td>
+            <td class="klasa"><img src="jablko.png" id="jablko" onclick="jablko()"></td>
+            <td class="klasa"><img src="cytryna.png" id="cytryna" onclick="cytryna()"></td>
+            <td class="klasa"><img src="wisnia.png" id="wisnia" onclick="wisnia2()"></td>
+        </tr>
+    </div>
+    <h3 id="wynik"></h3>
+    <h5 id="tresc"></h5>
+</body>
+</html>

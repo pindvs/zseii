@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: skyblue;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: red;
+}
+
+hr {
+    margin-bottom: 2rem;
+    border: 3px solid red;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+.set {
+    & + .set {
+        margin-top: 2rem;
+    }
+
+    p {
+        margin-top: 0;
+        font-weight: bold;
+    }
+
+    div {
+        display: flex;
+        gap: 1rem;
+    }
+
+    img {
+        width: 100px;
+    }
+}
+
+form {
+    padding-inline: 2rem;
+
+    label,
+    select,
+    input:not([type=checkbox]) {
+        display: block;
+    }
+
+    label + label {
+        margin-top: 1rem;
+    }
+
+    button {
+        all: unset;
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: red;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+section {
+    text-align: center;
+
+    h4 {
+        margin-block: 2rem .5rem;
+    }
+
+    p {
+        margin-block: 0;
+
+        & + p {
+            margin-top: .5rem;
+        }
+    }
+}
+
+#christmass-tree {
+    height: 400px;
+    align-self: center;
+    border-radius: 10px;
+}

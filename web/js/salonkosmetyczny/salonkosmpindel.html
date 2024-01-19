@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Kosmetyczny</title>
+</head>
+<body>
+    <div style="background-color: blue;">
+        <h1 style="color: aqua; text-align: center;">Salon kosmetyczny</h1>
+    </div>
+    <div style="background-color: aqua; text-align: center;">
+        <h1>Sprawdz cene swojej wizyty</h1>
+        <form onsubmit="event.preventDefault();calculate()">
+            <input type="checkbox" name="peel" id="peel">
+            <label for="peel">Peeling</label>
+            <input type="checkbox" name="mask" id="mask">
+            <label for="mask">Maska</label>
+            <input type="checkbox" name="mas" id="mas">
+            <label for="mas">Masaz</label>
+            <input type="checkbox" name="reg" id="reg">
+            <label for="reg">Regulacja brwi</label>
+            <input type="submit" value="Sprawdz cene">
+            <h3 id="message">Cena zabiegow: </h3>
+        </form>
+    </div>
+    <script>
+        function calculate()
+        {
+            let sum = 0;
+            if(document.getElementById("peel").checked)
+            {
+                sum+=45;
+            }
+            if(document.getElementById("mask").checked)
+            {
+                sum+=30;
+            }
+            if(document.getElementById("mas").checked)
+            {
+                sum+=20;
+            }
+            if(document.getElementById("reg").checked)
+            {
+                sum+=5;
+            }
+            document.getElementById("message").innerHTML =
+            "Cena zabiegow: " + sum;
+        }
+    </script>
+</body>
+</html>

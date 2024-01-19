@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dostep do elementow</title>
+</head>
+<body>
+    <div class="row">
+        <p id="byId">Metoda getElementById()</p>
+        <button onclick="byId()">Zmien wartosc</button>
+    </div>
+    <div class="row">
+        <p id="byName">Metoda getElementByName()</p>
+        <button onclick="byName()">Zmien wartosc</button>
+    </div>
+    <div class="row">
+        <p id="byTagName">Metoda getElementByTagName()</p>
+        <button onclick="byTagName()">Zmien wartosc</button>
+    </div>
+    <div class="row">
+        <p class="byClass">Metoda getElementByClass()</p>
+        <button onclick="byClass()">Zmien wartosc</button>
+    </div>
+    <div class="row">
+        <p id="query1">Metoda querySelector() z uzyciem ID</p>
+        <button onclick="query1()">Zmien wartosc</button>
+    </div>
+    <div class="row">
+        <p id="query2">Metoda querySelector() z uzyciem nazwy Tagu</p>
+        <button onclick="query2()">Zmien wartosc</button>
+    </div>
+    <div class="row">
+        <p id="query3">Metoda querySelector() z uzyciem klasy</p>
+        <button onclick="query3()">Zmien wartosc</button>
+    </div>
+    <script>
+    const byId = () => 
+    {
+        const element = document.getElementById("byId");
+        element.innerText = "Zmieniono wartosc przez iD";
+    }
+    const byName = () => 
+    {
+        const element = document.getElementsByName('byName')[0];
+        element.innerText = "Zmieniono wartosc przez nazwe";
+    }
+    const byTagName = () => 
+    {
+        const element = document.getElementsByTagName("p")[2];
+        element.innerText = "Zmieniono wartosc przez nazwe tagu";
+    }
+    const byClass = () => 
+    {
+        const element = document.getElementsByClassName('byClass')[0];
+        element.innerText = "Zmieniono wartosc przez klase";
+    }
+    const query1 = () => 
+    {
+        const element = document.querySelector("#query");
+        element.innerText = "Zmieniono wartosc przez query z uzyciem ID";
+    }
+    const query2 = () => 
+    {
+        const element = document.querySelectorAll("p")[5];
+        element.innerText = "Zmieniono wartosc przez query z uzyciem tagu";
+    }
+    const query3 = () => 
+    {
+        const element = document.querySelector(''.query");
+        element.innerText = "Zmieniono wartosc przez query z uzyciem klasy";
+    }
+    </script>
+</body>
+</html>

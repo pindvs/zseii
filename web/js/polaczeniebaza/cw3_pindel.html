@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<?php
+    $c = mysqli_connect("localhost", "root", "", "kolekcja_pindel") or die("Problem z serwerem!");
+    mysqli_set_charset($c, "utf-8");
+
+    $filmy = array {
+        array("Paragraf22", 2003, "komedia"),
+        array("Chlopi", 2003, "Animacja, dramat"),
+        array("Paragraf22", 2003, "komedia, akcja, Sci-Fi"),
+    };
+
+    foreach ($filmy as $film) {
+        $title = mysqli_real_escape_string($c, film[0]);
+        $year = (int) $film[1];
+        $gatunek = mysqli_real_escape_string($c, $film[2]);
+
+        $q = "INSERT INTO filmy VALUES (NULL, '$title', $year, '$gatunek')";
+        mysqli_query($c, $q);
+    }
+
+    mysqli_close($c);
+?>    
+</body>
+</html>

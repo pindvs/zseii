@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafelki</title>
+</head>
+<body>
+    <h1>Kafelkowanie lazienki</h1>
+    <p>Powierzchnia w m^2: <input type="number" id="dane"></p>
+    <input type="radio" id="20x20"> Plytki 20cm x 20cm
+    <input type="radio" id="25x12"> Plytki 25cm x 12cm<br><br>
+    <input type="submit" value="PRZELICZ" id="btn" onclick="przelicz()">
+    <br>
+    <p id="wynik" style="text-align: center;"></p>
+    <p>${a} nie dziala</p>
+    <script>
+        function przelicz()
+        {
+            var a = document.getElementById("dane").value;
+
+            if (document.getElementById("20x20").checked == true)
+            {
+                document.getElementById("wynik").innerHTML = "Koszt malowania " + a + "m^2 wyniesie " + (a * (35 * 2)) + "zl.";
+            }
+
+            else if (document.getElementById("25x12").checked == true)
+            {
+                document.getElementById("wynik").innerHTML = "Koszt malowania " + a + "m^2 wyniesie " + (a * (40 * 2)) + "zl.";
+            }
+
+            else 
+            {
+                document.getElementById("wynik").innerHTML = "[blad] Wybierz rozmiar plytki!"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragraf"> </p>
+    <script>
+        var osoba = {};
+        osoba.imie = "Alicja";
+        osoba["nazwisko"] = "Kowalska";
+        var wlasciwosc = "wiek";
+        osoba[wlasciwosc] = 17;
+        osoba.daneWyjscie = function()
+        {
+            return this.imie + " " + this.nazwisko + ",wiek: " + this.wiek;
+        }
+        document.getElementById("paragraf").innerHTML = O1.daneWyjscie();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolor listy</title>
+</head>
+<body>
+    <ul>
+        <li name='lista'>Punkt 1</li>
+        <li name='lista'>Punkt 2</li>
+        <li name='lista'>Punkt 3</li>
+    </ul>
+    <button onclick="przycisk1()">Zmien kolor</button>
+    <script>
+        function przycisk1()
+        {
+            var x = document.getElementsByTagName("li");
+            for(i=0; 1<x.length; i++)
+            {
+                x[i].style = "color: red";
+            }   
+        }
+    </script>
+</body>
+</html>

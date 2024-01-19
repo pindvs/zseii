@@ -1,0 +1,12 @@
+var owoc = "jablko";
+var cena = 4;
+
+switch (owoc)   
+{
+    case "jablko":
+        if(cena < 4)
+            alert("jablko jest w dobrej cenie")
+        else 
+            alert("jablko jest za drogie")
+    break;
+}

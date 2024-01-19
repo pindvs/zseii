@@ -1,0 +1,11 @@
+<?php
+$i = 0;
+while ($i < 10):
+	$i++;
+	echo $i . "<br>";
+endwhile;
+
+for ($i = 20; $i <= 30;; $i++):
+	echo $i . "<br>";
+endfor;
+?>

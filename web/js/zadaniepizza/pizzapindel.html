@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria</title>
+    <script>
+        function obliczanie()
+        {
+            var liczba = document.getElementById("num").value;
+            var suma = liczba * 2;
+            if (document.getElementById("check").checked == true)
+            {
+                document.getElementById("wynik").innerHTML = "Dowieziemy twoja pizze za darmo";
+            }
+            else if (document.getElementById("check").checked == false)
+            {
+                document.getElementById("wynik").innerHTML = "Dowoz bedzie cie kosztowal " + suma + " zlotych";
+            }
+        }
+    </script>
+    <style>
+        body{
+            background-color: #ccffcc;
+        }
+    </style>
+</head>
+<body>
+    <div id="podsumowanie">
+        <h3>Oblicz koszt dostawy</h3>
+        <input type="checkbox" id="check"> Jestem z zielonej gory
+        <p>albo</p>
+        Podaj liczbe kilometrow od Zielonej Gory: 
+        <input type="number" id="num">
+        <input type="submit" value="oblicz" onclick="obliczanie()">
+        <p id="wynik"></p>
+    </div>
+</body>
+</html>

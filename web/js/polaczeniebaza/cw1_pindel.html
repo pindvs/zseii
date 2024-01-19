@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<?php
+    $c = mysqli_connect("localhost", "root", "", "kolekcja_pindel") or die("Problem z serwerem!");
+    mysqli_set_charset($c, "utf-8");
+    $q = "INSERT INTO filmy VALUES (NULL, "Paragraf22", 2003, "komedia")";
+    mysqli_query($c, $q);
+    mysqli_close($c);
+?>
+</body>
+</html>
